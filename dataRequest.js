@@ -2,8 +2,6 @@ const currentDate = new Date();
 var extractedPrices = []
 var hasNegativePrices = false
 
-fetchElectricityPrice(currentDate);
-
 //FETCH & PARSE JSON RESULTS
 
 function fetchElectricityPrice(date) {
@@ -56,12 +54,26 @@ function extractPricesFromJSON(JSONData) {
         extractedPrices.push(priceStructure)
   }
 
-  handleUIupdates();
+    handleUIupdates();
 
 }
 
 //HANDLE UI CHANGES WITH RESULTS
 
 function handleUIupdates() {
-    console.log("UI uådates...")
+    checkNegativePrices();
+}
+
+function checkNegativePrices() {
+    for (let i = 0; i < extractedPrices.length; i++) {
+        const p = extractedPrices[i].price
+        if (p < 0) {
+            hasNegativePrices = true
+            break
+        }
+    }
+}
+
+function updateSheetRange() {
+
 }

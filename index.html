@@ -21,9 +21,36 @@
         <p>Tarkista pörssisähkön hinta helposti ja vaivattomasti!</p>
     </div>
     <div class="date-container">
-        <button class="date-button" id="today">Tänään</button>
+        <button class="date-button selected" id="today">Tänään</button>
         <button class="date-button" id="tomorrow">Huomenna</button>
+    </div>
+    <div class="sheet-container">
+        <div class="hour-sheet">
+            <div class="hour-sheet-top-left">
+                <p class="price-digit">0</p>
+                <p class="price-digit">0</p>
+                <p class="price-digit">0</p>
+                <p class="price-digit">0</p>
+                <p class="price-digit">0</p>
+                <p class="price-digit">0</p>
+            </div>
+            <div class="hour-sheet-top-right">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="hour-sheet-bottom-left">
+                <p class="price-digit">c/kWh</p>
+            </div>
+            <div class="hour-sheet-bottom-right">
+                
+            </div>
+        </div>
     </div>
 </body>
 <script src="index.js"></script>
+<script src="dataFetch.js"></script>
 </html>

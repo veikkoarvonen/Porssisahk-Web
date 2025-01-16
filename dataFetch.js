@@ -30,20 +30,26 @@ function createSheetRange() {
     }
 
     const priceGap = highestPriceForSheet / interval
+    var priceToAdd = highestPriceForSheet
 
     priceDigits.forEach((element, index) => {
-        element.textContent = highestPriceForSheet.toFixed(0)
-        highestPriceForSheet -= priceGap
+        element.textContent = priceToAdd.toFixed(0)
+        priceToAdd -= priceGap
     });
 }
 
 function displayPrices() {
     const priceColums = document.querySelectorAll(".price-column")
+    
     priceColums.forEach((element, index) => {
         const priceObject = fetchedPrices.find(item => item.hour === index);
+        console.log(priceObject)
+
         if (priceObject) {
-            const x = (priceObject.price / highestPriceForSheet) * 100;
-            element.style.top = `${x}%`;
+            var height = priceObject.price / highestPriceForSheet * 100
+            height = height.toFixed(0);
+
+            element.style.height = `${height}%`;
         }
     })
 
@@ -62,7 +68,7 @@ function generateTestingPrices() {
     const testingPrices = [
         10.25, 9.50, 5.75, 12.30, 8.00, 11.45, 3.60, 6.20, 
         10.50, 1.20, 5.40, 7.80, 14.00, 2.35, 3.25, 11.00, 
-        7.50, 4.60, 9.80, 8.10, 19.50, 13.75, 2.10, 4.80
+        7.50, 4.60, 9.80, 8.10, 19.50, 13.75, 2.10, 8
     ];
 
     for (let i = 0; i < 24; i++) {
