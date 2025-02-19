@@ -41,10 +41,24 @@ function addPriceContainer() {
     priceContainer.classList.add("price-container")
     parentContainer.appendChild(priceContainer);
 
+    const positivePriceBox = document.createElement("div")
+    const negativePriceBox = document.createElement("div")
+    positivePriceBox.classList.add("positive-price-box")
+    negativePriceBox.classList.add("negative-price-box")
+    priceContainer.appendChild(positivePriceBox)
+    priceContainer.appendChild(negativePriceBox)
+
+
     for (let i = 0; i < 24; i++) {
-        const column = document.createElement("div");
-        column.classList.add("price-column");
-        priceContainer.appendChild(column);
+        // Create price column for the positive price box
+        const positivePriceColumn = document.createElement("div");
+        positivePriceColumn.classList.add("positive-price-column");
+        positivePriceBox.appendChild(positivePriceColumn);
+
+        // Create price column for the negative price box
+        const negativePriceColumn = document.createElement("div");
+        negativePriceColumn.classList.add("negative-price-column");
+        negativePriceBox.appendChild(negativePriceColumn);
     }
 
 }
