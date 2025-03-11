@@ -10,6 +10,7 @@ Web-pohjainen työkalu, joka etsii tämän päivän pörssisöhkön hinnan Suome
 1. Lataa projekti laitteellesi
 2. Avaa index.html -tiedosto selaimessasi
 3. Sovellus näyttää hinnat automaattisesti
+4. Voit myös näyttää sovelluksen selaimessasi suoraan osoitteessa: https://veikkoarvonen.github.io/Porssisahk-Web/
 
 # API-rajapinta
 - Sovellus käyttää julkista rajapintaa, etkä tarvitse siihen avainta
