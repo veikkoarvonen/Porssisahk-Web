@@ -5,6 +5,7 @@ Web-pohjainen työkalu, joka etsii tämän päivän pörssisöhkön hinnan Suome
 - Web -pohjainen käyttöliittymä, joka näyttää pörssisähkön hinnan automaattisesti tälle päivälle
 - Automaattinen hintojen haku API -rajapinnasta
 - Hintojen esittäminen ja visualisointi käyttöliittymässä
+- Dynaaminen taulukko, joka mukautuu maksimihinnan ja mahdollisten negatiivisten hintojen mukaan
 
 # Käyttö
 1. Lataa projekti laitteellesi
